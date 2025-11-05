@@ -11,8 +11,8 @@ public class Collatz {
 	        if (mode.equals("v")) {
 	            System.out.print(seed + " ");
 	        }
-	        
-	        while (current != 1) {
+
+	        do {
 	            if (current % 2 == 0) {
 	                current = current / 2;
 	            } else {
@@ -24,7 +24,7 @@ public class Collatz {
 	            }
 	            
 	            steps++;
-	        }
+	        } while (current != 1);
 	        
 	        if (mode.equals("v")) {
 	            System.out.println("(" + steps + ")");

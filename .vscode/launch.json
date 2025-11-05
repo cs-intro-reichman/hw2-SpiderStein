@@ -38,7 +38,7 @@
             "mainClass": "Collatz",
             "projectName": "hw2-SpiderStein_a7a01616",
             "args": [
-                "7",
+                "1",
                 "v"
             ]
         },
