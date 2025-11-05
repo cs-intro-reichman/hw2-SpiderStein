@@ -2,31 +2,32 @@
 public class Collatz {
 	public static void main(String args[]) {
 	    int N = Integer.parseInt(args[0]);
-	    String mode = args[1];
+		String mode = args[1];
+		boolean isVerbose = mode.equals("v");
 	    
 	    for (int seed = 1; seed <= N; seed++) {
-	        int current = seed;
+	        int node = seed;
 	        int steps = 1;
-	        
-	        if (mode.equals("v")) {
+
+	        if (isVerbose) {
 	            System.out.print(seed + " ");
 	        }
 
 	        do {
-	            if (current % 2 == 0) {
-	                current = current / 2;
+	            if (node % 2 == 0) {
+	                node = node / 2;
 	            } else {
-	                current = (current * 3) + 1;
+	                node = (node * 3) + 1;
 	            }
 	            
-	            if (mode.equals("v")) {
-	                System.out.print(current + " ");
+	            if (isVerbose) {
+	                System.out.print(node + " ");
 	            }
 	            
 	            steps++;
-	        } while (current != 1);
+	        } while (node != 1);
 	        
-	        if (mode.equals("v")) {
+	        if (isVerbose) {
 	            System.out.println("(" + steps + ")");
 	        }
 	    }
